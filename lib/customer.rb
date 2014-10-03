@@ -1,5 +1,3 @@
-require_relative 'order'
-
 class Customer
 
 	attr_reader :name, :phone, :order
@@ -20,6 +18,10 @@ class Customer
 
 	def send_order
 		@order.submitted_order
+	end
+
+	def delete_order
+		@order.items.clear
 	end
 
 end

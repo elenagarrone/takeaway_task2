@@ -1,5 +1,3 @@
-require_relative 'lineitem'
-
 class Order
 
 	attr_reader :items

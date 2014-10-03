@@ -1,14 +1,18 @@
-require 'message'
-
 class Takeaway
 
+	include Message
+
 	def initialize
-		menu = Menu.new
+		@menu = nil
 		@orders = []
+	end
+
+	def add_menu(menu)
+		@menu = menu
 	end
 
 	def receive_order(customer)
 		@orders << customer.order
-		@message.send_sms(customer)
 	end
+
 end

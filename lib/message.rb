@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'twilio-ruby'
-require 'customer'
 
 module Message
 

@@ -1,5 +1,3 @@
-require_relative 'dish'
-
 class LineItem
 
 	attr_reader :dish, :quantity

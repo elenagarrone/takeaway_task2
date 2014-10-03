@@ -31,4 +31,10 @@ describe Customer do
 		expect(customer.send_order).to eq(true)
 	end
 
+	it 'should be able to delete the order' do
+		customer.choose(burger)
+		customer.choose(fries)
+		expect(customer.delete_order).to eq([])
+	end
+
 end
