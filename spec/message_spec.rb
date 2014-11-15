@@ -12,4 +12,9 @@ class SendMessage; include Message; end
 		expect(message).not_to be_sent
 	end
 
+	it "will send a message" do
+		allow(message).to receive(:send_sms).and_return true
+		message.send_sms(customer)
+	end
+
 end

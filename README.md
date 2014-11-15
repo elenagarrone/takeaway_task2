@@ -1,13 +1,35 @@
-Task 2 - Takeaway
-=================
+Takeaway
+======
+Task n.2 of the second week challenge: 
+write a takeaway service that can list dishes and place orders. Upon placing the order, the customer receives a text message informing them that the order will be delivered in the next half an hour.
+Technologies:
+-----------
+- Ruby
+- Rspec
+- Twilio API
 
-Write a class Takeaway.
-Implement the following functionality:
-- list of dishes with prices.
-- placing the order by giving the list of dishes and their quantities. To the customer is sent a text saying that the order was placed successfully and that it will be delivered 1 hour from now, e.g. "Thank you! Your order was placed and will be delivered before 18:52".
-The text sending functionality should be implemented using Twilio API. You'll need to register for it. It’s free.
-- Use twilio-ruby gem to access the API.
-- Use a Gemfile to manage your gems.
-- Make sure that your Takeaway class is thoroughly tested and that you use mocks and/or stubs, as necessary to not to send texts when your tests are run.
-- However, if your Takeaway class is loaded into IRB and the order is placed, the text should actually be sent
-- A free account on Twilio will only allow you to send texts to "verified" numbers. Use your mobile phone number, don't worry about the customer's mobile phone.
+How to use
+----------
+Clone the repository:
+```shell
+$ git clone https://github.com/elenagarrone/takeaway_task2.git
+```
+Change into the directory:
+```shell
+$ cd takeaway_task2
+```
+Create a tokens.rb file:
+```shell
+$ touch lib/tokens.rb
+```
+Sign up for a free Twilio account and populate the tokens.rb file with your Twilio tokens:
+```shell
+  ACCOUNT_SID = '(your ACCOUNT_SID)'
+  AUTH_TOKEN = '(your AUTH_TOKEN)'
+```
+
+To test it:
+```shell
+$ rspec
+```
+

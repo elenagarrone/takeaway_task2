@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'twilio-ruby'
+require 'tokens'
 
 module Message
 
@@ -16,8 +17,8 @@ module Message
 	def send_sms(customer)
 	 
 		# Get your Account Sid and Auth Token from twilio.com/user/account
-		account_sid = 'AC671d4b14a8072a4be081cd64e9b94df6'
-		auth_token = 'f145b5c6a1deb7c016228797e9546595'
+    account_sid = Tokens::ACCOUNT_SID 
+    auth_token = Tokens::AUTH_TOKEN
 		@client = Twilio::REST::Client.new account_sid, auth_token
 			 
 		message = @client.account.messages.create(:body => "#{customer.name},\nThanks for your order. It will be delivered in around 30 minutes.",
