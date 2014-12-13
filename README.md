@@ -1,6 +1,8 @@
+[![Code Climate](https://codeclimate.com/repos/548c0aee695680642c000c37/badges/968477194000923c9dc3/gpa.svg)](https://codeclimate.com/repos/548c0aee695680642c000c37/feed)
+
 Takeaway
 ======
-Task n.2 of the second week challenge: 
+Task n.2 of the second week challenge:
 write a takeaway service that can list dishes and place orders. Upon placing the order, the customer receives a text message informing them that the order will be delivered in the next half an hour.
 Technologies:
 -----------
@@ -27,9 +29,14 @@ Sign up for a free Twilio account and populate the tokens.rb file with your Twil
   ACCOUNT_SID = '(your ACCOUNT_SID)'
   AUTH_TOKEN = '(your AUTH_TOKEN)'
 ```
+Play with it on irb:
+```shell
+$ irb
+> require './runner.rb'
+```
 
 To test it:
+----------
 ```shell
 $ rspec
 ```
-
