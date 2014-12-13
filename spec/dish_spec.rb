@@ -2,7 +2,7 @@ require 'dish'
 
 describe Dish do
 
-	let(:burger) {Dish.new('Burger', 3.4)}
+	let(:burger) { Dish.new('Burger', 3.4) }
 
 	context 'when initialized' do
 
