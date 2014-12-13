@@ -1,9 +1,9 @@
 require 'lineitem'
 
 describe LineItem do
-	
-	let(:burger)   {Dish.new('Burger', 3.4)}
-	let(:lineitem) {LineItem.new(burger, 3)}
+
+	let(:burger)   { Dish.new('Burger', 3.4) }
+	let(:lineitem) { LineItem.new(burger, 3) }
 
 	it 'should be initialized with a dish and the quantity' do
 		expect(lineitem.dish).to eq(burger)
@@ -19,4 +19,3 @@ describe LineItem do
 	end
 
 end
-
