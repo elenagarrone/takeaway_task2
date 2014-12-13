@@ -15,7 +15,7 @@ class Menu
 	end
 
 	def list_dishes
-		@dishes.each.with_index(1) { |dish, index| puts "#{index}. #{dish.name}: £ #{dish.price}" }
+		@dishes.each.with_index(1) { |dish, index| list = "#{index}. #{dish.name}: £ #{dish.price}"; return list}
 	end
 
 end

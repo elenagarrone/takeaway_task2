@@ -1,4 +1,3 @@
-require './tokens.rb'
 require './lib/dish'
 require './lib/lineitem'
 require './lib/menu'
