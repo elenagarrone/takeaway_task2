@@ -1,4 +1,3 @@
-require './lib/order'
 class Takeaway
 
 	include Message
