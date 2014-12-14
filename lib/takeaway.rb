@@ -1,3 +1,4 @@
+require './lib/order'
 class Takeaway
 
 	include Message
@@ -5,6 +6,7 @@ class Takeaway
 	def initialize
 		@menu = nil
 		@orders = []
+		@order = Order.new
 	end
 
 	def add_menu(menu)
@@ -12,7 +14,11 @@ class Takeaway
 	end
 
 	def receive_order(customer)
-		@orders << customer.order
+		if customer.order.complete?
+			@orders << customer.order
+		else
+			return "No order received yet"
+		end
 	end
 
 end

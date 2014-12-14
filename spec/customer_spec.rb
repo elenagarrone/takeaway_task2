@@ -2,10 +2,10 @@ require 'customer'
 
 describe Customer do
 
-	let(:customer) {Customer.new('Elena', '07774724218')}
-	let(:fries)    {Dish.new('French fries', 2.2)}
-	let(:burger)   {Dish.new('Burger', 3.5)}
-	
+	let(:customer) { Customer.new('Elena', '07774724218') }
+	let(:fries)    { Dish.new('French fries', 2.2) }
+	let(:burger)   { Dish.new('Burger', 3.5) }
+
 	it "should have a name" do
 		expect(customer.name).to eq('Elena')
 	end
@@ -15,7 +15,7 @@ describe Customer do
 	end
 
 	it 'should be able to choose an item to order' do
-		expect(customer.choose(fries)). to eq([fries])
+		expect(customer.choose(fries)).to eq([fries])
 	end
 
 	it 'should be able to remove an item from the order' do
