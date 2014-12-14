@@ -13,11 +13,7 @@ class Takeaway
 	end
 
 	def receive_order(customer)
-		if customer.order.complete?
-			@orders << customer.order
-		else
-			return "No order received yet"
-		end
+		customer.order.complete? ? @orders << customer.order : (return "No order received yet")
 	end
 
 end
