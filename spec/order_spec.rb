@@ -3,10 +3,10 @@ require 'order'
 describe Order do
 
   let(:burger)          { Dish.new('Burger', 3.5) }
-  let(:fries) 		      { Dish.new('French fries', 2.2) }
+  let(:fries)           { Dish.new('French fries', 2.2) }
   let(:lineitem_burger) { LineItem.new(burger, 3) }
   let(:lineitem_fries)  { LineItem.new(fries, 2) }
-  let(:order) 		      { Order.new }
+  let(:order)           { Order.new }
 
   it 'should be able to add lineitems' do
     expect(order.add(lineitem_burger)).to eq([lineitem_burger])
